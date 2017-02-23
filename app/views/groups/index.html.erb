@@ -1,6 +1,6 @@
 <div class="col-md-12">
   <div class="group">
-    <%= link_to("New group", new_group_path, class: "btn btn-primary pull-right") %>
+    <%= link_to("创建新的群组", new_group_path, class: "btn btn-primary pull-right") %>
   </div>
   <table class="table table-hover">
     <thead>
@@ -20,8 +20,8 @@
           <td> <%= group.user.email %> </td>
           <td>
               <% if current_user && current_user == group.user %>
-              <%= link_to("Edit", edit_group_path(group), class: "btn btn-sm btn-default") %>
-              <%= link_to("Delete", group_path(group),    class: "btn btn-sm btn-default",
+              <%= link_to("编辑", edit_group_path(group), class: "btn btn-sm btn-default") %>
+              <%= link_to("删除", group_path(group),    class: "btn btn-sm btn-default",
                           method: :delete, data: { confirm: "Are you sure?" }) %>
               <% end %>
           </td>
