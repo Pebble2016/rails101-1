@@ -68,7 +68,7 @@ class GroupsController < ApplicationController
       flash[:warning] = "你不是本讨论版成员，怎么退出 XD"
     end
 
-    redirecte_to group_path(@group)
+    redirect_to group_path(@group)
   end
 
 
